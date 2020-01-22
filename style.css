@@ -1,6 +1,6 @@
 
 body {
-    background-color: rgb(241, 234, 214);
+    background-color: rgb(245, 239, 225);
   }
   
   h1 {
@@ -11,4 +11,5 @@ body {
   p {
     font-family: verdana;
     font-size: 20px;
+    color: rgb(127, 228, 186)
   }
