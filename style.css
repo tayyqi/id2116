@@ -5,8 +5,7 @@ body {
   
   h1 {
     @font-face {
-      font-family: poppins
-      src: url(poppins);
+      font-family: 'Poppins', sans-serif;
     }
     color: rgb(160, 160, 250);
     text-align: center;
@@ -14,9 +13,9 @@ body {
   
   p {
     @font-face {
-      font-family: poppins
-      src: url(poppins);
+      font-family: 'Poppins', sans-serif;
     }
     font-size: 20px;
     color: rgb(0, 0, 0);
     }
+
