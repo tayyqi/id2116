@@ -5,13 +5,9 @@ body {
     background-color: rgb(250, 250, 250);
   }
   
-@font-face{
-    font-family: Poppins-ExtraLight;
-    src: url(Poppins-ExtraLight.otf);
-  }
 
   h1 {
-    font-family: Poppins-ExtraLight;
+    font-family: 'Poppins', sans-serif;
     font-size: 40px;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -19,7 +15,7 @@ body {
   
 
   p {
-   font-family: Poppins-ExtraLight;
+   font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: rgb(0, 0, 0);
     }
