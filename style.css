@@ -1,19 +1,17 @@
 
 body {
     background-color: rgb(245, 239, 225);
+    font-family: 'Poppins', sans-serif;
   }
   
   h1 {
-    @font-face {
-      font-family: 'Poppins', sans-serif;
-    }
+    font-family: 'Poppins', sans-serif;
     color: rgb(160, 160, 250);
     text-align: center;
   }
   
   p {
-    @font-face {
-      font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     }
     font-size: 20px;
     color: rgb(0, 0, 0);
