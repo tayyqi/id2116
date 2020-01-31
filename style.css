@@ -12,12 +12,13 @@ body {
     
   
   h1 {
-    font-family: 'Poppins', sans-serif;
-    color: rgb(40, 255, 2);
+    font-family: 'Vibur', cursive;
+    color:#f76565;
     text-align: center;
     font-size: 30px;
   }
   
+
   p {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
