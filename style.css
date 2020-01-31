@@ -1,19 +1,16 @@
 
 body {
    font-family: 'Poppins', sans-serif;
-    #animated-gif-container {
-      /*    
-      background-image:url(http://winnerhun.uw.hu/vigyorpofa.gif);
-      background-repeat:no-repeat;
-      */
-            
-      width:48px;
-      height:48px;    
-      
-      background-image: url(https://www.pinterest.com/pin/588001295086056695/) no-repeat center center;  
-    }
+   background-image: url('http://2.bp.blogspot.com/-DKpyu_REz88/VcJICBG-sxI/AAAAAAAAFZE/QbafJrRZD4I/s640/8bit%2Bgif%2Bjapan%2B-%2B1041uuu%2B-%2BDiedrica%2BBlog%2B03.gif');
+   background-size: cover;
     
-  }
+    
+    
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+    
   
   h1 {
     font-family: 'Poppins', sans-serif;
