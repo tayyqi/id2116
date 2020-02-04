@@ -25,10 +25,46 @@
   <img src="IMAGE/yq_profile pic.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0" align="left">
 
 
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<h2>Images Side by Side</h2>
+<p>How to create side-by-side images with the CSS float property:</p>
+
+<div class="row">
+  <div class="column">
+    <img src="image/yq_profile pic.jpg" alt="Yingqiprofile" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="image/IMG20170212105430.jpg" alt="Johnprofile" style="width:100%">
+  </div>
+</div>
+
+</body>
+
 </a>
 </body>
     <p>Weekly Journals</p>
-    <p><a href="wk2.html">JOHN MARIE TAN</a> 
+    <p><a href="johnweek2.html">JOHN MARIE TAN</a> 
       | W3 
       | W4 
       | W5 
