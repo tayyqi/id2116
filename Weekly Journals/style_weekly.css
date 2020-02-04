@@ -25,13 +25,12 @@ body {
        margin-top: 10px;
      }
      
-    
-
-     .row {
-      display: flex;
-    }
-    
-    .column {
-      flex: 50%;
-      padding: 5px;
-    }
+  
+.pen {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right:50px;
+  max-width: 50%;
+  height: auto;
+}
