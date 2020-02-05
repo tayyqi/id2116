@@ -1,7 +1,11 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #161616;
+    /* background-color: #161616; */
+    background-image: url(https://image.freepik.com/free-vector/violet-light-line-cross-dark-grey-background_33869-1195.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
  }
  
  h1 {
