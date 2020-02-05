@@ -15,10 +15,11 @@ body {
      font-family: 'Poppins', sans-serif;
      font-size: 20px;
      color: #E7DFDD;
-     text-align: center;
+     text-align: left;
+     margin-left: 25px;
      }
      
-     img {
+    /* img {
        display: block;
        margin-left: 10px;
        margin-right: auto;
@@ -26,11 +27,3 @@ body {
      }
      
   
-.pen {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 50px;
-  margin-right:50px;
-  max-width: 50%;
-  height: auto;
-}

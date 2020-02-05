@@ -11,6 +11,25 @@
      alt="twitch-logo-font" border:0 width="5%" height="5%";>
  </head>
 
+<style>
+   * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 50%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+</style>
+
 <!--photos/videos of the object
 -  micro:bit code to interact with the object
 -  idea / observation etc..-->
@@ -23,9 +42,18 @@
 
 
      <p>Object 2: Pen</p>
+
+     <div class="row">
+        <div class="column">
+            <img class="pen" src="WEEK2_documentation/yq_pen_click.gif" alt="pen_click" style="width:50%">
+        </div>
+        <div class="column">
+            <img class="pen" src="WEEK2_documentation/yq_pen_twist.gif" alt="pen_twist" style="width:50%">
+        </div>
+      </div>
      <div class="pen">
-        <div><img class="pen" src="WEEK2_documentation/yq_pen_click.gif" alt="pen_click"></div>
-        <div><img class="pen" src="WEEK2_documentation/yq_pen_twist.gif" alt="pen_twist"></div>
+        <div></div>
+        <div>></div>
      </div> 
 
     
