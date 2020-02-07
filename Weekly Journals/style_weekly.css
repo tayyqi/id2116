@@ -40,6 +40,46 @@ body {
       margin: 5px 100px 5px 100px;
       }
 
+      p.code{
+        font-family: 'Source Code Pro', monospace;
+        font-size: 16px;
+        color: #E7DFDD;
+        text-align: left;
+        margin: 5px 10px 5px 10px;
+      }
+
+      p.code1{
+        font-family: 'Source Code Pro', monospace;
+        font-size: 16px;
+        color: #E7DFDD;
+        text-align: left;
+        margin: 5px 10px 5px 20px;
+      }
+      p.code2{
+        font-family: 'Source Code Pro', monospace;
+        font-size: 16px;
+        color: #E7DFDD;
+        text-align: left;
+        margin: 5px 10px 5px 30px;
+      }
+      p.code3{
+        font-family: 'Source Code Pro', monospace;
+        font-size: 16px;
+        color: #E7DFDD;
+        text-align: left;
+        margin: 5px 10px 5px 40px;
+      }
+        
+
+      div.code{
+        font-family: 'Source Code Pro', monospace;
+        font-size: 16px;
+        color: #E7DFDD;
+        text-align: left;
+        margin: 5px 400px 5px 400px;
+        border: 1px solid #ddd;
+      }
+
 
      img {
        display: block;
@@ -48,7 +88,15 @@ body {
       .row {
         display: flex;
       }
+
+      div.box {
+        width: 300px;
+        border: 15px solid rgb(199, 202, 199);
+        padding: 50px;
+        margin: 20px;
+      }
    
+
 
    .column {
         flex: 33.33%;
