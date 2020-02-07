@@ -76,10 +76,21 @@ body {
         font-size: 16px;
         color: #E7DFDD;
         text-align: left;
-        margin: 5px 400px 5px 400px;
+        margin: 20px 250px 20px 250px;
         border: 1px solid #ddd;
       }
 
+code{
+  font-size: 16px;
+        color: #E7DFDD;
+        text-align: left;
+}
+
+pre{
+  font-size: 16px;
+  color: #E7DFDD;
+  text-align: left;
+}
 
      img {
        display: block;
@@ -89,12 +100,12 @@ body {
         display: flex;
       }
 
-      div.box {
+      /* div.box {
         width: 300px;
         border: 15px solid rgb(199, 202, 199);
         padding: 50px;
         margin: 20px;
-      }
+      } */
    
 
 

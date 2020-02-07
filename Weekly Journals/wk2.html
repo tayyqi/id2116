@@ -75,17 +75,84 @@
 
     <p>Graphing acceleration of micro:bit in x direction</p>
     <ul>- Tracking of vertical displacement of shoebag</ul>
-    <p></p>
+   
     <div class="code">
-      <p class="code">basic.forever(function () {</p>
-        <p class="code1">led.plotBarGraph(</p>
-          <p class="code2">   input.acceleration(Dimension.X),</p>
-            <p class="code3".code>5</p class="code".code>
-      <p class="code2">)</p>
-     <p class="code1">})</p>
+      <pre>
+        <code>
+          basic.forever(function () {
+            led.plotBarGraph(
+            input.acceleration(Dimension.X),
+            5
+            )
+      })
+      </code>
+    </pre>
+   
+     
   </div>
 
-    <p></p>
+  <p>Music control using micro:bit</p>
+    <!-- <ul>- Tracking of vertical displacement of shoebag</ul> -->
+    <div class="code">
+      <pre>
+        <code>
+    bluetooth.onBluetoothConnected(function () {
+      basic.showIcon(IconNames.Yes)
+  })
+  input.onGesture(Gesture.Shake, function () {
+      devices.tellRemoteControlTo(MesRemoteControlEvent.play)
+      basic.showLeds(`
+          . # . . .
+          . # # . .
+          . # # # .
+          . # # . .
+          . # . . .
+          `)
+  })
+  input.onButtonPressed(Button.A, function () {
+      devices.tellRemoteControlTo(MesRemoteControlEvent.previousTrack)
+      basic.showLeds(`
+          . . # . .
+          . # . . .
+          # # # # #
+          . # . . .
+          . . # . .
+          `)
+  })
+  input.onGesture(Gesture.ThreeG, function () {
+      devices.tellRemoteControlTo(MesRemoteControlEvent.pause)
+      basic.showLeds(`
+          . . . . .
+          . # . # .
+          . # . # .
+          . # . # .
+          . . . . .
+          `)
+  })
+  input.onButtonPressed(Button.B, function () {
+      devices.tellRemoteControlTo(MesRemoteControlEvent.nextTrack)
+      basic.showLeds(`
+          . . # . .
+          . . . # .
+          # # # # #
+          . . . # .
+          . . # . .
+          `)
+  })
+  basic.showString("SPOTIFY")
+  basic.forever(function () {
+      basic.pause(1000)
+      basic.showLeds(`
+          . # # # .
+          . # . # .
+          . # . # .
+          # . # . .
+          . . . . .
+          `)
+  })
+</code>
+</pre>
+</div>
    
 
 
