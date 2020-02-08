@@ -1,6 +1,6 @@
 
 body {
-font-family: 'Source Sans Pro', sans-serif;    /* background-color: #161616; */
+font-family: 'Open Sans', sans-serif;    /* background-color: #161616; */
     background-image: url(https://besthqwallpapers.com/Uploads/11-7-2019/99510/black-stylish-texture-purple-neon-light-black-stylish-background-neon-lines-creative-paper-textures.jpg);
     background-repeat: repeat-y;
     background-size: cover;
@@ -15,7 +15,7 @@ font-family: 'Source Sans Pro', sans-serif;    /* background-color: #161616; */
    }
 
    h2 {
-font-family: 'Source Sans Pro', sans-serif;    font-size: 20px;
+font-family: 'Playfair Display', sans-serif;    font-size: 20px;
     font-weight: bolder;
     color: #E7DFDD;
     text-align: left;
@@ -24,7 +24,7 @@ font-family: 'Source Sans Pro', sans-serif;    font-size: 20px;
 
     /* Title subtext */
     h3{
-  font-family: 'Source Sans Pro', sans-serif;    font-size: 20px;
+  font-family: 'Playfair Display', sans-serif;    font-size: 20px;
     font-weight: bold;
     color: #E7DFDD;
     text-align: center;
@@ -33,7 +33,7 @@ font-family: 'Source Sans Pro', sans-serif;    font-size: 20px;
    
 /* label diagrams */
     h4{
-  font-family: 'Source Sans Pro', sans-serif;    font-size: 16px;
+  font-family: 'Open Sans', sans-serif;    font-size: 16px;
     font-weight: bolder;
     color: #E7DFDD;
     text-align: center;
@@ -41,14 +41,14 @@ font-family: 'Source Sans Pro', sans-serif;    font-size: 20px;
     }
 
    p {
- font-family: 'Source Sans Pro', sans-serif;     font-size: 16px;
+ font-family: 'Open Sans', sans-serif;     font-size: 16px;
      color: #E7DFDD;
      text-align: left;
      margin: 5px 100px 5px 125px;
      }
 
      ul {
-  font-family: 'Source Sans Pro', sans-serif;      font-size: 16px;
+  font-family: 'Open Sans', sans-serif;      font-size: 16px;
       color: #E7DFDD;
       text-align: left;
       margin: 5px 100px 5px 100px;
