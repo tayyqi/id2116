@@ -98,65 +98,74 @@
     <div class="code">
       <pre>
         <code>
-    bluetooth.onBluetoothConnected(function () {
-      basic.showIcon(IconNames.Yes)
-  })
-  input.onGesture(Gesture.Shake, function () {
-      devices.tellRemoteControlTo(MesRemoteControlEvent.play)
-      basic.showLeds(`
-          . # . . .
-          . # # . .
-          . # # # .
-          . # # . .
-          . # . . .
-          `)
-  })
-  input.onButtonPressed(Button.A, function () {
-      devices.tellRemoteControlTo(MesRemoteControlEvent.previousTrack)
-      basic.showLeds(`
-          . . # . .
-          . # . . .
-          # # # # #
-          . # . . .
-          . . # . .
-          `)
-  })
-  input.onGesture(Gesture.ThreeG, function () {
-      devices.tellRemoteControlTo(MesRemoteControlEvent.pause)
-      basic.showLeds(`
-          . . . . .
-          . # . # .
-          . # . # .
-          . # . # .
-          . . . . .
-          `)
-  })
-  input.onButtonPressed(Button.B, function () {
-      devices.tellRemoteControlTo(MesRemoteControlEvent.nextTrack)
-      basic.showLeds(`
-          . . # . .
-          . . . # .
-          # # # # #
-          . . . # .
-          . . # . .
-          `)
-  })
-  basic.showString("SPOTIFY")
-  basic.forever(function () {
-      basic.pause(1000)
-      basic.showLeds(`
-          . # # # .
-          . # . # .
-          . # . # .
-          # . # . .
-          . . . . .
-          `)
-  })
+          bluetooth.onBluetoothConnected(function () {
+            basic.showIcon(IconNames.Yes)
+        })
+        input.onGesture(Gesture.LogoUp, function () {
+            devices.tellRemoteControlTo(MesRemoteControlEvent.play)
+            basic.showLeds(`
+                . # . . .
+                . # # . .
+                . # # # .
+                . # # . .
+                . # . . .
+                `)
+        })
+        input.onButtonPressed(Button.A, function () {
+            devices.tellRemoteControlTo(MesRemoteControlEvent.previousTrack)
+            basic.showLeds(`
+                . . # . .
+                . # . . .
+                # # # # #
+                . # . . .
+                . . # . .
+                `)
+        })
+        input.onGesture(Gesture.ScreenUp, function () {
+            devices.tellRemoteControlTo(MesRemoteControlEvent.pause)
+            basic.showLeds(`
+                . . . . .
+                . # . # .
+                . # . # .
+                . # . # .
+                . . . . .
+                `)
+        })
+        input.onButtonPressed(Button.B, function () {
+            devices.tellRemoteControlTo(MesRemoteControlEvent.nextTrack)
+            basic.showLeds(`
+                . . # . .
+                . . . # .
+                # # # # #
+                . . . # .
+                . . # . .
+                `)
+        })
+        basic.showString("SPOTIFY")
+        
+        
 </code>
 </pre>
 </div>
-   
+ 
+<h2>Experimentation: Shoebag</h2>
 
+<div class="container">
+  <div class="row" align="center">
+<div class="column">
+    <img class="shoebag" src="WEEK2_documentation/music_spotify.gif" alt="spotify" style="width:50%">
+    <p>On start, microbit shows string "SPOTIFY"</p>
+</div>
+<div class="column">
+    <img class="shoebag" src="WEEK2_documentation/music_pause_play.gif" alt="pause_play" style="width:50%">
+    <p>Microbit displays pause button when lying down and play button when straight up.</p>
+</div>
+<div class="column">
+  <img class="shoebag" src="WEEK2_documentation/music_prev_next.gif" alt="prev_next" style="width:50%">
+  <p>When button A is pressed prev song is played. When button B is pressed next song is played.</p>
+</div>
+</div>
+</div>
 
  </body>
 
