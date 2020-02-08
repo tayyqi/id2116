@@ -36,3 +36,22 @@ body {
 
     <div.boxed style="opacity:0.1;"><p>10% opacity</p></div>
    
+     /* unvisited link */
+a:link {
+  color: rgb(255, 255, 255);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(178, 219, 243);
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+/* a:active {
+  color: blue;
+} */

@@ -23,7 +23,27 @@ body {
     text-align: left;
     margin: 15px 100px 15px 100px;
     }
+
+    /* Title subtext */
+    h3{
+      font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #E7DFDD;
+    text-align: center;
+    margin: 15px 100px 15px 100px;
+    }
    
+/* label diagrams */
+    h4{
+      font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #E7DFDD;
+    text-align: center;
+    margin: 10px 100px 10px 100px;
+    }
+
    p {
      font-family: 'Poppins', sans-serif;
      font-size: 16px;
@@ -74,9 +94,9 @@ pre{
        display: block;
       }
     
-      .row {
-        display: flex;
-      }
+.row {
+   display: flex;
+  }
 
       /* div.box {
         width: 300px;
@@ -96,7 +116,29 @@ pre{
      margin: 15px 100px 15px 100px;
    }
 
-   .shoebag{
-    margin: 15px 100px 15px 100px;
-  }
+   .bbygroot{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+   }
  
+ /* unvisited link */
+a:link {
+  color: rgb(255, 255, 255);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(178, 219, 243);
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+/* a:active {
+  color: blue;
+} */
