@@ -2,7 +2,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     /* background-color: #161616; */
-    background-image: url(https://image.freepik.com/free-vector/violet-light-line-cross-dark-grey-background_33869-1195.jpg);
+    background-image: url(hhttps://besthqwallpapers.com/Uploads/11-7-2019/99510/black-stylish-texture-purple-neon-light-black-stylish-background-neon-lines-creative-paper-textures.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -124,14 +124,14 @@ pre{
    }
  
  /* unvisited link */
-a:link {
+a:link, a:visited {
   color: rgb(255, 255, 255);
 }
 
-/* visited link */
+/* visited link
 a:visited {
   color: rgb(178, 219, 243);
-}
+} */
 
 /* mouse over link */
 a:hover {
@@ -142,3 +142,19 @@ a:hover {
 /* a:active {
   color: blue;
 } */
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
