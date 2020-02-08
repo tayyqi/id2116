@@ -34,17 +34,58 @@ body {
       width: 20%;
     }
 
-    <div.boxed style="opacity:0.1;"><p>10% opacity</p></div>
-   
-     /* unvisited link */
-a:link {
-  color: rgb(255, 255, 255);
+    .profile {
+      position: relative;
+      width: 100%;
+    }
+    
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: rgb(255, 255, 255);
+    }
+    
+    .profile:hover .overlay {
+      opacity: 0.3;
+    }
+    
+    .text {
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+
+
+ /* unvisited link */
+ a:link, a:visited {
+  color: white;
 }
 
-/* visited link */
+/* visited link
 a:visited {
   color: rgb(178, 219, 243);
-}
+} */
 
 /* mouse over link */
 a:hover {
@@ -55,3 +96,19 @@ a:hover {
 /* a:active {
   color: blue;
 } */
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
