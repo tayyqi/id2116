@@ -16,10 +16,6 @@
 
 <h1>Week 3 exploration: create a media player</h1>
 
-<h3>We would like you to enjoy this gif as we work in progress :)</h3>
-
-<!-- <p>WORK IN PROGRESS!</p> -->
-
 
 <!--
 MiniProject 01: New “Switch”
@@ -44,11 +40,144 @@ Transform an “Everyday Object” into a “Digital Switch” to trigger a medi
 3. Document above iteration and post it under “week3/” folder of your repository. . -->
 
 <body>
-    <div class="bbygroot" align=center>
-        <img class="bby groot" src="https://media.giphy.com/media/F9hQLAVhWnL56/200.gif" alt="work in progress">
-        
-    </div>
+    <h2>Task 1: Ideate “mapping” of [Audio, Visual, Physical] feedback with the action of your Object.</h2>
+        <p>Item selected: Shoebag</p>
+        <p>[action] lift shoebag to vertical position → [feedback] play music</p>
+        <p>[action] twist shoebag clockwise → [feedback] play next music track</p>
+        <p>[action] twist shoebag anti-clockwise → [feedback] play previous music track</p>
 
+    <h2>Task 2: Experiment desired feedbacks using p5.js</h2>
+    <p>We decided to combine the image flipbook and video player together such that when the "next" or "prev" button is pressed,
+        the next or previous video will play respectively. </p>
+    <p>Some problems encountered:</p>
+    <p>- the previous songs continued to play even though we pressed the next button</p>
+    <p>- videos did not load into the server</p>
+
+   <p>This is the final code that managed to work in p5.js</p>>
+   
+   <div class="code"> 
+    <pre>
+            <code>
+                var vid;
+                let vid_filelist = ['videos/twice_whatislove_8bits.mp4'
+                ,'videos/redvelvet_cookiejar_8bit_videogame.mp4','video
+                s/redvelvet_powerup_8bit_videogame.mp4','videos/popstar
+                s_kda_videogame_style_8bit.mp4','videos/seventeen_ohmy_
+                8bit.mp4'];
+                //link references
+
+                let vid_list = [];
+
+                var playing = 0
+
+
+                // This function is called when the video loads
+                function vidLoad() {
+                // vid.loop();
+                // vid.volume(0);
+                }
+
+
+                function preload(){
+
+                for(let filename of vid_filelist){
+                    //load and push the image into the imagelist
+                    vid_list.push( createVideo(filename,vidload) );
+                
+                }
+                    print(vid_list.length+ " videos are loaded into the list!");
+                }
+
+
+                function vidload(){
+                
+                for(let video of vid_list){
+                    video.hide();
+                }
+                }
+
+                function setup() {
+                createCanvas(windowWidth, windowHeight);
+                    
+                }
+
+                let current_video = 0;
+
+
+                function draw(){
+                image(vid_list[current_video], 0, 0, 600, 400);
+                // vid.size(640,400)
+
+                }
+
+
+
+                //set the curretn_image to next id
+                function next(){
+                //stop current video
+                pause();
+                current_video = current_video + 1;
+                //play updated current video.
+
+                if(current_video > vid_list.length -1){
+                    current_video = 0;
+                    
+                    play();
+                }
+                    
+                print("next video is " + (current_video +1));
+                }
+
+                //set the current_image to previous id
+                function prev(){
+                pause();
+                
+                current_video = current_video - 1;
+                    
+                if(current_video < 0){
+                    current_video = vid_list.length - 1
+                    play();
+                }
+                    
+
+                print("prev video is " + (current_video + 1));
+                }
+
+                function setup(){
+                createCanvas(600,400)
+                
+                //create a button with "prev text"
+                prevButton = createButton('prev');
+                //set prev() function to cal prev() when mousePressed
+                prevButton.mousePressed(prev);
+                
+                //create a button with "next" text
+                nextButton = createButton('next');
+                //set next() function to cal next() when mousePressed
+                nextButton.mousePressed(next);
+                }
+
+                function mousePressed(){
+                if(playing == 0){
+                    play();
+                    
+                }else{
+                    pause();
+                }
+                }
+
+                function play(){
+                playing = 1;
+                vid_list[current_video].play();
+                }
+                
+                function pause(){
+                    playing = 0;
+                    vid_list[current_video].pause();
+                }
+            </code>
+        </pre>
+    </div>
 </body>
 
 </html>
