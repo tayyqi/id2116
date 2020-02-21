@@ -24,11 +24,180 @@
  -->
 
 <body>
-    <div class="bbygroot" align=center>
-        <img class="bby groot" src="https://media.giphy.com/media/F9hQLAVhWnL56/200.gif" alt="work in progress">
-    
+    <div class="container">
+    <div class="row" align="center">
+        <div class="column">
+            <img class="microbit" src="WEEK5_documentation/microbit_video_control.png" alt="microbit_video_control" style="width:100%">
+        </div>
+            <div class="column">
+                <img class="microbit" src="WEEK5_documentation/P5js_video.png" alt="P5js_video" style="width:100%">
+            </div>
       </div>
+    </div>
 
+<div class = "code">
+    <pre>
+        <code>
+            /*video ref: 
+            WHAT IS LOVE?, Twice - 8 bits: https://www.youtube.com/watch?v=BeGFu6ezw88&t=4s
+            #COOKIE JAR, Red Velvet - Videogame style - 8 bits: https://www.youtube.com/watch?v=GpuP7wCdTjg&t=8s
+            POWER UP, Red Velvet - Videogame Style - 8 bits: https://www.youtube.com/watch?v=q9hgo2aYkgQ&t=19s
+            POP/STARS, K/DA - Videogame Style: https://www.youtube.com/watch?v=LqChXmteEkg
+            OH MY!, Seventeen - Videogame Style - 8 bits: https://www.youtube.com/watch?v=61OdlXNQGyE&t=121s
+            */
+            
+            
+            let uBitDevice;
+            let rxCharacteristic;
+            let gestureStatus;
+            var vid;
+            // let vol=0.8;
+            let vid_filelist = ['videos/twice_whatislove_8bits.mp4','videos/redvelvet_cookiejar_8bit_videogame.mp4',
+            'videos/redvelvet_powerup_8bit_videogame.mp4','videos/popstars_kda_videogame_style_8bit.mp4','videos/seventeen_ohmy_8bit.mp4'];
+            //link references
+            let vid_list = [];
+            var playing = 0
+            
+            // This function is called when the video loads
+            function vidLoad() {
+              // vid.loop();
+              // vid.volume(0);
+            }
+            
+            
+            function preload(){
+            
+              for(let filename of vid_filelist){
+                //load and push the image into the imagelist
+                vid_list.push( createVideo(filename,vidload) );
+             
+              }
+                print(vid_list.length+ " videos are loaded into the list!");
+            }
+            
+            
+            function vidload(){
+              
+              for(let video of vid_list){
+                video.hide();
+              }
+            }
+            
+            let current_video = 0;
+            
+            
+            function draw(){
+              image(vid_list[current_video], 0, 0, 600, 400);
+              // vid.size(640,400)
+              
+            }
+            
+            
+            function setup(){
+              createCanvas(600,400)
+            
+            //   playButton = createButton('play');
+            
+            //   playButton.mousePressed(toggleVid); // attach button listener
+            
+            //   //video.showControls();
+            
+              const connectButton = createButton("Connect");
+              connectButton.mousePressed(connectButtonPressed);
+            
+              const disconnectButton = createButton("Disconnect");
+              disconnectButton.mousePressed(disconnectButtonPressed);
+            
+               playButton = createButton('play');
+              
+              //create a button with "prev text"
+              prevButton = createButton('prev');
+              //set prev() function to cal prev() when mousePressed
+              prevButton.mousePressed(prev);
+              
+              
+              //create a button with "next" text
+              nextButton = createButton('next');
+              //set next() function to cal next() when mousePressed
+              nextButton.mousePressed(next);
+              
+                playButton.mousePressed(toggleVid);
+              
+              vid_list[current_video].stop();
+            
+            }
+            
+            
+            // plays or pauses the video depending on current state
+            function toggleVid() {
+              print(playing)
+              if (playing == 1) {
+                vid_list[current_video].pause();
+                playButton.html('play');
+                playing = 0;
+              } else {
+                vid_list[current_video].play(); 
+                playButton.html('pause');
+                playing = 1;
+              }
+            
+            }
+            
+            
+            //set the current_video to next id
+            function next(){
+              //stop current video
+             pause();
+              current_video = current_video + 1;
+              //play updated current video.
+            
+              if(current_video > vid_list.length -1){
+                current_video = 0;
+                playing = 0;
+              }
+              play();
+              playButton.html('pause');
+                
+              print("next video is " + (current_video +1));
+            }
+            
+            //set the current_video to previous id
+            function prev(){
+              pause();
+              
+              current_video = current_video - 1;
+                
+              if(current_video < 0){
+                current_video = vid_list.length - 1
+                  
+                  playing = 1;
+              }
+              play();
+              playButton.html('pause');
+            
+              print("prev video is " + (current_video + 1));
+            }
+            
+            function play(){
+              playing = 1;
+              vid_list[current_video].play();
+              print("print")
+            
+            }
+              
+              function pause(){
+                playing = 0;
+                vid_list[current_video].pause();
+                playButton.html('play');
+                print("pause");
+              }
+            
+
+            
+        </code>
+    </pre>
+</divclass>
+    
 </body>
 
 </html>
