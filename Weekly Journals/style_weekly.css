@@ -4,7 +4,8 @@ font-family: 'Open Sans', sans-serif;    /* background-color: #161616; */
     background-image: url(https://besthqwallpapers.com/Uploads/11-7-2019/99510/black-stylish-texture-purple-neon-light-black-stylish-background-neon-lines-creative-paper-textures.jpg);
     background-repeat: repeat-y;
     background-size: cover;
-    /* background-position: center; */
+    text-align: center;
+    background-position: center;
  }
  
  h1 {
