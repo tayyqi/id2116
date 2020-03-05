@@ -149,7 +149,7 @@ a:active {
   text-decoration: underline;
 }
 
-.dropdown {
+/* .dropdown {
   position: relative;
   display: inline-block;
 }
@@ -166,7 +166,7 @@ a:active {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
 /* Dropdown Button */
 .dropbtn {
@@ -202,10 +202,27 @@ a:active {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: rgb(255, 255, 255);
+  opacity: 0.6;
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #773e8e;}
+
+/* Style buttons */
+.btn {
+  background-color: rgb(154, 30, 255); /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(225, 65, 185);
+}
