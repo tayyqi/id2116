@@ -97,15 +97,26 @@ pre{
   }
 
 
-
+/* 3 object */
    .column {
         flex: 33.33%;
         padding: 5px;
    } 
   
+   /* 4 object */
+   .column4 {
+    flex: 25%;
+    padding: 5px;
+} 
+
    .container{
      margin: 15px 100px 15px 100px;
    }
+
+   /* .clipboard{
+     width: 50%;
+     height: auto;
+   } */
 
    .bbygroot{
     display: block;
